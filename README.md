@@ -8,7 +8,7 @@ expexse_tracker.bat 파일을 실행하면 자동으로 pip install이 되고 �
 .env 파일에 내 supabase API가 담겨있는데, 무단으로 쓰면 고소할거임
 
 English
-This is a household accounting program created as a university project.
+This is a expense tracking program created as a university project.
 It includes simple accounting features (expense tracking, budget management, and category storage).
 
 If you run the expense_tracker.bat file, pip install will be executed automatically and the program will start.
