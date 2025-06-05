@@ -1,0 +1,375 @@
+/* 모달 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease;
+}
+
+.modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    padding: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* 폼 */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* 색상 선택기 */
+.color-picker {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.color-picker input[type="color"] {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.color-preview {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #e2e8f0;
+}
+
+/* 지출 아이템 */
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.3s ease;
+}
+
+.expense-item:hover {
+    background-color: #f8fafc;
+}
+
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+.expense-info {
+    flex: 1;
+}
+
+.expense-title {
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.expense-details {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.expense-amount {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ef4444;
+    margin-right: 1rem;
+}
+
+.expense-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #6b7280;
+    transition: all 0.3s ease;
+}
+
+.btn-icon:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.btn-icon.edit:hover {
+    color: #3b82f6;
+}
+
+.btn-icon.delete:hover {
+    color: #ef4444;
+}
+
+/* 카테고리 아이템 */
+.category-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.category-item:last-child {
+    border-bottom: none;
+}
+
+.category-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.category-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #e2e8f0;
+}
+
+.category-name {
+    font-weight: 500;
+    color: #1e293b;
+}
+
+/* 예산 상태 */
+.budget-status-item {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.budget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.budget-category {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1e293b;
+}
+
+.budget-percentage {
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.budget-percentage.safe {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.budget-percentage.warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.budget-percentage.danger {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.budget-progress {
+    background: #f1f5f9;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.budget-progress-bar {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.budget-progress-bar.safe {
+    background: #22c55e;
+}
+
+.budget-progress-bar.warning {
+    background: #f59e0b;
+}
+
+.budget-progress-bar.danger {
+    background: #ef4444;
+}
+
+.budget-amounts {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* 토스트 알림 */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #1f2937;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+    max-width: 400px;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast.success {
+    background: #059669;
+}
+
+.toast.error {
+    background: #dc2626;
+}
+
+.toast.warning {
+    background: #d97706;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 빈 상태 */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #64748b;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+.empty-state p {
+    margin-bottom: 1.5rem;
+}
